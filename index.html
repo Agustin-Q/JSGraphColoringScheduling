@@ -7,15 +7,23 @@
   <title>Graph Coloring</title>
   <meta name="description" content="Graph Coloring">
   <meta name="Agustin Queija" content="SitePoint">
-
+  <script src="loadExampleData.js"></script>
   <link rel="stylesheet" href="css/styles.css?v=1.0">
-  <script src="script.js"></script>
-
+  
 </head>
 
 <body>
   <div class="content">
-    <h1>Hello World</h1>
+    <h1>JS Graph Coloring Scheduling</h1>
+    <p>Event, Resource:</p>
+    <textarea id="input" name="input" ></textarea>
+    <input id="compute" type="button" value="Compute"/>
+    <p>Conflict Matrix:</p>
+    <textarea id="output2" name="output2" ></textarea>
+    <p>Result:</p>
+    <textarea id="output" name="output" ></textarea>
   </div>
+  <script src="graphColoring.js"></script>
+  <script src="conflictMatrix.js"></script>
 </body>
 </html>
