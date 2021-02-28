@@ -33,15 +33,9 @@ function getNextVertex(matrix, colors, degreeMatrix){
       }
       let satDegree = adjacentColors.length;
       let newVertex = false;
-      if (satDegree>maxSatDegree){
+      if (satDegree>maxSatDegree || (satDegree == maxSatDegree && degreeMatrix[i] > degreeMatrix[maxVertex])){
         maxSatDegree = satDegree;
         maxVertex = i;
-        newVertex = true;
-      } else if (satDegree == maxSatDegree && degreeMatrix[i] > degreeMatrix[maxVertex]){
-        maxVertex = i;
-        newVertex = true;
-        }
-      if(newVertex){
         let tempColor =1;
         if(adjacentColors.length==0)  nextColor = 1;
         adjacentColors.sort();
@@ -137,10 +131,4 @@ let matrix = [
 ];
 
 colorGraph(matrix);
-
-/*
-console.log('Matrix2');
-let matrix2 = generateRandomMatrix(22);
-//printMatrix(matrix2);
-colorGraph(matrix2);
 */
