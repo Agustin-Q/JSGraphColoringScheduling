@@ -10,7 +10,7 @@ function getNextVertex(matrix, colors, degreeMatrix){
     }
   }
   let maxSatDegree =0;
-  let nextColor= 1;
+  let nextColor = 1;
   for (let i=0; i<matrix.length; i++){
     // if its not colored
     if (colors[i]== 0){
@@ -27,12 +27,10 @@ function getNextVertex(matrix, colors, degreeMatrix){
               //add the colour to adjacent colurs
               adjacentColors.push(colors[j]);
             }
-            //satDegree++;
           }
         }
       }
       let satDegree = adjacentColors.length;
-      let newVertex = false;
       if (satDegree>maxSatDegree || (satDegree == maxSatDegree && degreeMatrix[i] > degreeMatrix[maxVertex])){
         maxSatDegree = satDegree;
         maxVertex = i;
